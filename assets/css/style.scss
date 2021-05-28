@@ -1,0 +1,52 @@
+---
+---
+
+@import 'jekyll-theme-hacker';
+	
+::-moz-selection {
+	color: black;
+	background: #b5e853;
+}
+
+::selection {
+	color: black;
+	background: #b5e853;
+}
+
+/* width */
+::-webkit-scrollbar { width: 7px; }
+/* Track */
+::-webkit-scrollbar-track { background: #303030; }
+/* Handle */
+::-webkit-scrollbar-thumb { background: #b5e853; }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover { background: #7fad28; }
+
+.tags span {
+	background-color: #b5e853;
+	color: black;
+	padding: 3px;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.share-post {
+	font-size: 11px;
+}
+.share-post #deco {
+	position: relative;
+	color: #b5e853;
+	font-size: 16px;
+	top: 2px;
+}
+
+footer {
+	opacity: 0.5;
+	position: relative;
+	top: 100px;
+	padding-bottom: 20px;
+	text-align: center;
+	line-height: 4px;
+	font-size: 11px;
+}

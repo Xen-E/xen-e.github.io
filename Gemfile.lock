@@ -290,6 +290,7 @@ DEPENDENCIES
   github-pages (~> 214)
   jekyll-admin
   jekyll-feed (~> 0.15.1)
+  jekyll-sitemap
   jekyll-theme-hacker
   tzinfo (~> 1.2)
   tzinfo-data

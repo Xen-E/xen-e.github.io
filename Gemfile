@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem "jekyll-admin"
   gem "jekyll-theme-hacker"
   gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-sitemap"
 end
 
 

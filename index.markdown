@@ -8,11 +8,12 @@ layout: default
 {% for post in site.posts %}
 <article>
 	<h2><a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a></h2>
-	<time datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date | date_to_long_string}}</time>	
+	<time datetime="{{post.date | date: "%B %d. %Y"}}">{{post.date | date: "%B %d. %Y"}}</time>
 	{% if post.excerpt %}
     	{{post.excerpt}}
 	{% else %}
 		{{post.content}}
 	{% endif %}
 </article>
+<hr>
 {% endfor %}

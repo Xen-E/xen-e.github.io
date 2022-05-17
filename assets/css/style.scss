@@ -22,6 +22,26 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover { background: #7fad28; }
 
+article time {
+	color: gray;
+	position: absolute;
+	font-style: italic;
+	font-size: 12px;
+	margin-top: -20px;
+}
+
+section#main_content hr {
+	margin-bottom: 50px;
+}
+
+small#post_datetime_author {
+	position: absolute;
+	color: gray;
+	font-style: italic;
+	font-size: 12px;
+	margin: -20px 0 0 20px;
+}
+
 .tags span {
 	background-color: #b5e853;
 	color: black;

@@ -6,9 +6,10 @@ tags:
 - Motherboard
 - Windows
 ---
+
+![Motherboard internal speakers]({{site.url}}/images/internal_speakers.jpg){:class="image_right"}
 Computers back in the day used to be shipped with something called PC Internal Speakers which was mainly used by the BIOS and sometimes old software, today motherboards still have a port for them but you have to buy one now instead of getting it for free. i got mine from my old Pentium 4 PC when i was cleaning stuff i used it on my newer motherboard to see if still works and it did! but only when i turned on the PC not when i logged in to Windows. <!--more-->
 
-![First version of Playlist Converter++]({{site.url}}/images/internal_speakers.jpg)
 
 The reason behind that is because Microsoft dropped the support for their "**beep**" driver which is located in "*C:\Windows\System32\drivers\beep.sys*". The affected systems are Windows XP 64-bit edition and Windows Vista. All Windows versions after that didn't support the classic "beep" sound in motherboards including Windows 7 which is i was using.
 

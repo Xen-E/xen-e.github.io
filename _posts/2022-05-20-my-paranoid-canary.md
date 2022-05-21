@@ -1,5 +1,6 @@
 ---
 title: My Paranoid Canary
+description: Why canary birds such schizos? here's a little story about my new canary pet and how to take care of them.
 tags:
 - Canary
 - Finch

@@ -1,5 +1,6 @@
 ---
 title: Windows Beep
+description: How to make your windows system beep again like the good ol times using the motherboard speakers.
 tags:
 - Beep
 - Speakers

@@ -84,6 +84,42 @@ small#post_author {
 	top: 2px;
 }
 
+.pagination {
+	text-align: center;
+}
+#previous {
+	font-size: 13px;
+	background-color: #97d426;
+	color: rgb(105, 105, 105);
+	border: 2px solid white;
+	border-radius: 5px 0 0 5px;
+	padding: 3px 5px;
+	margin-right: -6px;
+}
+#previous a {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+#previous:hover { background-color: #82b12b; }
+#next {
+	font-size: 13px;
+	background-color: #97d426;
+	color: rgb(105, 105, 105);
+	border: 2px solid white;
+	border-radius: 0 5px 5px 0;
+	padding: 3px 5px;
+}
+#next a {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+#next:hover { background-color: #82b12b; }
+
+#page_number {
+	margin-left: 5px;
+}
 footer {
 	opacity: 0.5;
 	position: relative;

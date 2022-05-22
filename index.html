@@ -5,7 +5,7 @@
 layout: default
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article>
 	<h2><a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a></h2>
 	<time datetime="{{post.date | date: "%B %d. %Y"}}">{{post.date | date: "%B %d. %Y"}}</time>

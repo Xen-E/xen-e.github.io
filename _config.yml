@@ -38,6 +38,10 @@ plugins:
   
 excerpt_separator: <!--more-->
 
+# "/page:num/" is important because is used to check if user is in front page, keep it
+paginate: 5
+paginate_path: "/page:num/"
+
 github:
   playlistConverterxx: https://github.com/Xen-E/pcxx
   lolcdb: https://github.com/Xen-E/lolcdb

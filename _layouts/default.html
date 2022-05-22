@@ -34,6 +34,15 @@
       </section>
     </div>
 
+    {% if page.url == "/" or page.url contains "/page" %}
+    <!-- Pagination links -->
+    <div class="pagination">
+      <span id="previous">{% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}">Previous</a>{% else %}<span>Previous</span>{% endif %}</span>
+      <span id="next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path }}">Next</a>{% else %}<span>Next</span>{% endif %}</span>
+      <span id="page_number"> | Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    </div>
+    {% endif %}
+
     {% if site.google_analytics %}
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -44,6 +53,7 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+
   </body>
   <footer>
     <p>This website is hosted by GitHub and uses Jekyll.</p>

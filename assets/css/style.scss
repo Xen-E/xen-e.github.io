@@ -88,6 +88,7 @@ small#post_author {
 	text-align: center;
 }
 #previous {
+	cursor: default;
 	font-size: 13px;
 	background-color: #97d426;
 	color: rgb(105, 105, 105);
@@ -97,12 +98,14 @@ small#post_author {
 	margin-right: -6px;
 }
 #previous a {
+	cursor: pointer;
 	text-decoration: none;
 	font-weight: bold;
 	color: black;
 }
 #previous:hover { background-color: #82b12b; }
 #next {
+	cursor: default;
 	font-size: 13px;
 	background-color: #97d426;
 	color: rgb(105, 105, 105);
@@ -111,6 +114,7 @@ small#post_author {
 	padding: 3px 5px;
 }
 #next a {
+	cursor: pointer;
 	text-decoration: none;
 	font-weight: bold;
 	color: black;

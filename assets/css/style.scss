@@ -22,6 +22,30 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover { background: #7fad28; }
 
+.nav ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgb(41, 41, 41);
+}
+.nav li { float: left; }
+.nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px 18px;
+	text-decoration: none;
+}
+.nav li a:hover:not(.active) { background-color: #111; }
+.nav li .active { background-color: #91c92b; }
+.nav #github_profile {
+	float: right;
+	background: url(../images/github.png) left no-repeat;
+	background-size: 36px 36px;
+	padding-left: 35px;
+}
+
 article time {
 	background: url(../images/calendar.png) left no-repeat;
 	color: gray;

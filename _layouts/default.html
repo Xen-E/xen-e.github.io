@@ -18,13 +18,23 @@
         </a>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
-        <section id="downloads">
+
+        <div class="nav">
+          <ol>
+            <li><a href="/" {% if page.url == "/" %} class="active" {% endif %}>Home</a></li>
+            <li><a href="/projects/pcxx" {% if page.url contains "projects/pcxx" %} class="active" {% endif %}>PC++</a></li>
+            <li><a href="/projects/lolcdb" {% if page.url contains "projects/lolcdb" %} class="active" {% endif %}>LoLCDB</a></li>
+            <li id="github_profile"><a href="https://github.com/Xen-E/" target="_blank">./PROFILE</a></li>
+          </ol>
+        </div>
+
+        <!--section id="downloads">
           {% if site.show_downloads %}
             <a href="{{ site.github.playlistConverterxx }}" target="_blank" class="btn btn-github"><span class="icon"></span>Playlist Converter++</a>
             <a href="{{ site.github.lolcdb }}" target="_blank" class="btn btn-github"><span class="icon"></span>LoLCDB</a>
           {% endif %}
           <a href="{{ site.github.repository_url }}" target="_blank" class="btn btn-github"><span class="icon"></span>This Site Source Code</a>
-        </section>
+        </section-->
       </div>
     </header>
 

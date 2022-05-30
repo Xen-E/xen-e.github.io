@@ -22,8 +22,9 @@
         <div class="nav">
           <ol>
             <li><a href="/" {% if page.url == "/" %} class="active" {% endif %}>Home</a></li>
-            <li><a href="/projects/pcxx" {% if page.url contains "projects/pcxx" %} class="active" {% endif %}>PC++</a></li>
-            <li><a href="/projects/lolcdb" {% if page.url contains "projects/lolcdb" %} class="active" {% endif %}>LoLCDB</a></li>
+            <li><a href="/software/pcxx" {% if page.url contains "software/pcxx" %} class="active" {% endif %}>PC++</a></li>
+            <li><a href="/software/lolcdb" {% if page.url contains "software/lolcdb" %} class="active" {% endif %}>LoLCDB</a></li>
+            <li><a href="/software/fud" {% if page.url contains "software/fud" %} class="active" {% endif %}>FUD</a></li>
             <li id="github_profile"><a href="https://github.com/Xen-E/" target="_blank">./PROFILE</a></li>
           </ol>
         </div>
@@ -40,7 +41,9 @@
 
     <div class="container">
       <section id="main_content">
-        {{ content }}
+        <div {% if page.url == "/" or page.url contains "/page" %} class="front_page" {% else %} class="content" {% endif %} >
+          {{ content }}
+        </div>        
       </section>
     </div>
 

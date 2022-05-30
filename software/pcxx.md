@@ -47,38 +47,35 @@ It can also create as many types and even more!
 
 ## Downloads
 
-To make sure you're downloading the latest binaries please check the [releases](https://github.com/Xen-E/pcxx/releases) page.
+[Windows 64bit](https://github.com/Xen-E/pcxx/releases/download/1.1/PCxx-1.1-x86_64-setup.exe){:class="downloadBtn"}
+[Windows 32bit](https://github.com/Xen-E/pcxx/releases/download/1.1/PCxx-1.1-i686-setup.exe){:class="downloadBtn"}
+[Linux (64bit)](https://github.com/Xen-E/pcxx/releases/download/1.1/PCxx_Linux_v1.1.zip){:class="downloadBtn"}
 
-### Windows
-For x86-64 architecture (64bit): [PCxx_x86_64_setup.exe](https://github.com/Xen-E/pcxx/releases/download/1.0/PCxx_x86_64_setup.exe)
+Don't forget to check out [Releases Page](https://github.com/Xen-E/pcxx/releases).
 
-For i686 architecture (32bit): [PCxx_i686_setup.exe](https://github.com/Xen-E/pcxx/releases/download/1.0/PCxx_i686_setup.exe)
+## User Installation
 
-### Linux
-For Linux in general download [PCxx_Linux_v1.0.zip](https://github.com/Xen-E/pcxx/releases/download/1.0/PCxx_Linux_v1.0.zip), extract it then find a file called "Run Me" and double click it OR right click and hit "Run" thats's it! You don't need to make it executable just run it. Please notice that this binary was built using Ubuntu 20.04.2.0 LTS (Focal Fossa) which is based on Debian. So if you face any problems try to build the project yourself (Check below).
+For Windows just download and double click the installer and then follow the instructions, For Linux in general download the compressed file, extract it then find a file called "Run Me" and double click it OR right click and hit "Run" thats's it! You don't need to make it executable just run it. Please notice that this binary was built using Ubuntu 20.04.2.0 LTS (Focal Fossa) which is based on Debian. So if you face any problems try to build the project yourself (Check below).
 
-### macOS/Other
-Right now i don't have a mac to test and make binaries, But the project should work fine if you have Qt/TagLib installed in your system. You can build it easily... Check the building section below.
 
-## Building
+## Dev Installation
 
 PC++ built using the [Qt](https://www.qt.io) framework (**5.15.2**), that means you need to have a Qt toolchain installed in your system... Make sure to have the **Qt Designer** as well so you can open the project file.
 
-### Linux
 Also make sure you have [TagLib](https://taglib.org) library in your system, If you use Linux (Debian/Ubuntu...etc) open the terminal and type:
 ```console
 sudo apt install libtag1-dev
 ```
-Arch Linux:
+Arch based:
 ```console
 sudo pacman -S taglib
 ```
-### Windows
+
 In Windows you gonna need to download the source files and build it yourself, Nothing special just cmake stuff... Example:
 ```console
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF ..
-make
+make -j4
 ```
 > Notice that `-DBUILD_SHARED_LIBS=OFF` will produce a **static** version which is important.
 

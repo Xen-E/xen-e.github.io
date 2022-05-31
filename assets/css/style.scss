@@ -44,10 +44,39 @@
 	background: url(../images/github.png) left no-repeat;
 	background-size: 36px 36px;
 	padding-left: 35px;
+	margin-right: 5px;
 }
 
 .content h2, h3, h4 {
 	border-bottom: #578107 dashed 1px;
+}
+
+#search_input {
+	float: right;
+	margin-right: 5px;
+}
+#search_input #searchInput {
+	width: 100px;
+	background-color: black;
+	color: #b5e853;
+	border: 2px solid #b5e853;
+	border-radius: 6px;
+	padding: 4px;
+	margin-top: 7px;
+}
+#search_input #searchInput:focus {
+	outline: 1px solid #b5e853;
+}
+#search_input button {
+	background-color: #aadd4b;
+	color: black;
+	border: 2px solid rgb(0, 0, 0);
+	padding: 3px;
+	font-weight: bold;
+}
+#search_input button:hover {
+	background-color: yellow;
+	cursor: pointer;
 }
 
 article time {

@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="google-site-verification" content="LZSnZOE7xwi-3GNA9CCweIf_mCl2BJlqOayyhacbxbs" />
+
+
+    {% if page.tipue_search_active or layout.tipue_search_active %}
+    <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
+    <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+    <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+    {% endif %}
+
+    <script>
+      function gotoSearchPage() {
+        var searchInput = document.getElementById("searchInput");
+        if (searchInput.value != "")
+          window.location.href = "/search/?q=" + searchInput.value;
+      }
+    </script>
+
     {% seo %}
   </head>
 
@@ -25,6 +44,14 @@
             <li><a href="/software/pcxx" {% if page.url contains "software/pcxx" %} class="active" {% endif %}>PC++</a></li>
             <li><a href="/software/lolcdb" {% if page.url contains "software/lolcdb" %} class="active" {% endif %}>LoLCDB</a></li>
             <li><a href="/software/fud" {% if page.url contains "software/fud" %} class="active" {% endif %}>FUD</a></li>
+
+            {% unless page.url contains "/search/" %}
+            <li id="search_input">
+                <input type="text" id="searchInput" onkeypress="if (event.key == 'Enter') gotoSearchPage()">
+                <button onclick="gotoSearchPage()">Search</button>
+            </li>
+            {% endunless %}
+            
             <li id="github_profile"><a href="https://github.com/Xen-E/" target="_blank">./PROFILE</a></li>
           </ol>
         </div>

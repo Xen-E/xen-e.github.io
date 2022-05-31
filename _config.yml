@@ -42,6 +42,13 @@ excerpt_separator: <!--more-->
 paginate: 5
 paginate_path: "/page:num/"
 
+# Tipue search settings
+tipue_search:
+  include:
+    pages: true
+  exclude:
+    files: [search.html, index.html]
+    
 github:
   playlistConverterxx: https://github.com/Xen-E/pcxx
   lolcdb: https://github.com/Xen-E/lolcdb

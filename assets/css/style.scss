@@ -1,5 +1,11 @@
 ---
 ---
+ 
+/*
+	This is my custom style.css file for my github page
+	It was built on "hacker theme" which is provided by Github.
+	Xen <xen-dev@pm.me> xen-e.github.io
+*/
 
 @import 'jekyll-theme-hacker';
 	
@@ -204,4 +210,24 @@ footer {
 	text-align: center;
 	line-height: 4px;
 	font-size: 11px;
+}
+
+.content ol {
+	list-style: none;
+	counter-reset: item;
+	margin-left: -20px;
+}
+.content ol li {
+	counter-increment: item;
+	margin-bottom: 5px;
+}
+.content ol li:before {
+	margin-right: 10px;
+	content: counter(item);
+	background: #b5e853;
+	border-radius: 100%;
+	color: rgb(0, 0, 0);
+	width: 1.3em;
+	text-align: center;
+	display: inline-block;
 }

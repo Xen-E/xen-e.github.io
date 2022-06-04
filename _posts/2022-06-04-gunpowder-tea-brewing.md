@@ -9,7 +9,7 @@ tags:
 
 When people generalize tea as a drink with one known flavor like coffee or orange juice is actually very misleading; It comes in different colors, flavors, and even minerals! And one of my favorite teas is a strong black tea with earthy taste called **Gunpowder**.<!--more-->
 
-![Gunpowder Tea]({{site.url}}/images/gunpowder-tea.png){:class="image_center"}
+![Gunpowder Tea]({{site.url}}/images/gunpowder-tea.jpg){:class="image_center"}
 
 The name "Gunpowder" refers to the small pellets of tea which are said to resemble the gunpowder used by british battleships in the 19th century, Although gunpowder tea is traditionally made with green tea leaves (camellia sinensis), the leaves for this infusion are left to oxidize and ferment until they become a black tea.
 

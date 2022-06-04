@@ -104,12 +104,20 @@ section#main_content hr {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 20px;
+}
+.image_center:hover {
+	filter: sepia(100%);
 }
 .image_right {
 	float: right;
 	width: 250px;
 	height: auto;
 	padding: 10px;
+	border-radius: 20px;
+}
+.image_right:hover {
+	filter: sepia(100%);
 }
 
 small#post_datetime {

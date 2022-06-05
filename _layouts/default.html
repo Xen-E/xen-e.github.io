@@ -80,7 +80,7 @@
             <p class="sidebarHeader">Categories</p>
             <ul>
               {%- for category in site.categories -%}
-              <li><a href="/category/{{ category[0] }}">{{ category[0] }}</a></li>
+              <li><a href="/category/{{ category[0] }}" title='Show all posts in category "{{ category[0] }}".'>{{ category[0] }}</a></li>
               {%- endfor -%}
             </ul>
           </div>
@@ -94,7 +94,7 @@
           </div>
           <div class="archive">
             <p class="sidebarHeader">Archive</p>
-            <a href="/year/2022" title="Posts from year 2021">2022</a>
+            <a href="/year/2022" title="Posts from year 2022">2022</a>
             <a href="/year/2021" title="Posts from year 2021">2021</a>
           </div>
           <div class=".links">
@@ -102,15 +102,15 @@
             <ol id="links">
               <li>
                 <img src="/assets/images/github.png" alt="Github Profile">
-                <a href="https://github.com/Xen-E/" target="_blank">Profile</a>
+                <a href="https://github.com/Xen-E/" target="_blank" title="See my humble Github profile. Follow me :)">Profile</a>
               </li>
               <li>
                 <img src="/assets/images/rss.png" alt="Sitemap">
-                <a href="https://xen-e.github.io/sitemap.xml">Sitemap</a>
+                <a href="https://xen-e.github.io/sitemap.xml" title="See raw XML data of this website map">Sitemap</a>
               </li>
               <li>
                 <img src="/assets/images/rss.png" alt="RSS Feed">
-                <a href="https://xen-e.github.io/feed.xml">RSS Feed</a>
+                <a href="https://xen-e.github.io/feed.xml" title="The classical RSS feeds that you can use to subscribe.">RSS Feed</a>
               </li>
             </ol>
           </div>

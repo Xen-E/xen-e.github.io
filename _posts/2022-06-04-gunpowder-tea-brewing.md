@@ -1,6 +1,7 @@
 ---
 title: How to brew Gunpowder Tea (My way)
 description: Get that earthy sweet taste into your mouth.
+category: Personal
 tags:
 - Gunpowder
 - Tea

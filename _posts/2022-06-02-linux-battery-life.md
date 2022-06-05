@@ -1,6 +1,7 @@
 ---
 title: How to improve battery life in Linux systems
 description: Does your Laptop or notebook dies out quickly after using Linux? here's how you fix it.
+category: How-To
 tags:
 - Linux
 - Battery

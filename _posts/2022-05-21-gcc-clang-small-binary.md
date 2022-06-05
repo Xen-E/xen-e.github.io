@@ -1,6 +1,7 @@
 ---
 title: How to make GCC/Clang produce a very small executable
 description: Learn how to force the GCC and Clang compilers to produce a very small binary files using special flags.
+category: Dev
 tags:
 - GCC
 - Clang

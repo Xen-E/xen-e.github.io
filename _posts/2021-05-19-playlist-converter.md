@@ -1,6 +1,7 @@
 ---
 title: Playlist Converter++
 description: Read, Manage, Fix, Convert & Create Professional Playlists with this powerful app.
+category: Dev
 tags:
 - PCxx
 - PC++

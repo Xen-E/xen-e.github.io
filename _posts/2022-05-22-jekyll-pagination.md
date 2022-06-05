@@ -1,6 +1,7 @@
 ---
 title: Add pagination to your Github page or Jekyll website
 description: Learn how to easily implement pagination to jekyll, the static site generator.
+category: How-To
 tags:
 - Pagination
 - Jekyll

@@ -1,6 +1,7 @@
 ---
 title: 5 Things you need to know before buying a treadmill
 description: Things i wish i knew before i bought a treadmill.
+category: Personal
 tags:
 - Treadmill
 - Lubrication

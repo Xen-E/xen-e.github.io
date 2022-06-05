@@ -3,6 +3,8 @@ layout: default
 title: Archive
 ---
 
+<h2 id="categoryPageTitle">Posts in Category: "{{ page.category }}"</h2>
+
 {% for post in site.posts %}
 	{% if post.categories contains page.category or post.category == page.category %}
 		<article>

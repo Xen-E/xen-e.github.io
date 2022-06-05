@@ -3,6 +3,8 @@ layout: default
 title: Archive
 ---
 
+<h2 id="tagPageTitle">Posts in Tag: "{{ page.tag }}"</h2>
+
 {% for post in site.posts %}
 	{% if post.tags contains page.tag or post.tag == page.tag %}
 		<article>

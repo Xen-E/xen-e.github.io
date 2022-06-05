@@ -6,11 +6,18 @@ layout: default
 
 <small id="post_datetime">{{ page.date | date: "%-d %B. %Y" }}</small>
 <small id="post_author">{{ page.author | default: site.author }}</small>
-<br>
-{{content}}
+<small id="post_category">{{ page.category }}</small>
+
+<br><br>
+
+<span class="articleContent">{{content}}</span>
 
 {% if page.tags %}
-  <small class="tags">Tags: <span>{{ page.tags | join: "</span> - <span>" }}</span></small>
+<small class="postTags">Tags:
+{%- for tag in page.tags -%}
+<a href="/tag/{{ tag | downcase }}">{{ tag }}</a>
+{%- endfor -%}
+</small>
 {% endif %}
 
 <div class="share-post">

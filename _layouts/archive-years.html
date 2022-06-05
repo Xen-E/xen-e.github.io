@@ -3,6 +3,8 @@ layout: default
 title: Archive
 ---
 
+<h2 id="yearPageTitle">Posts from Year: "{{ page.year }}"</h2>
+
 {% for post in site.posts %}
 	{% assign postyear = post.date | date: "%Y" %}
 	{% if postyear == page.year %}

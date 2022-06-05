@@ -51,7 +51,17 @@
 	border-bottom: #578107 dashed 1px;
 }
 
-h2 a { border: none; }
+#categoryPageTitle, 
+#tagPageTitle {
+	background: url(../images/tags.png) left no-repeat;
+	padding-left: 30px;
+	background-size: 26px 26px;
+}
+#yearPageTitle {
+	background: url(../images/calendar.png) left no-repeat;
+	padding-left: 30px;
+	background-size: 22px 22px;
+}
 
 .wrapper {
 	display: flex;
@@ -82,6 +92,7 @@ section#main_content {
 	font-size: 14px;
 	margin-right: 10px;
 	border-radius: 3px;
+	cursor: default;
 }
 .sidebar select {
 	background-color: #111;
@@ -102,7 +113,12 @@ section#main_content {
 	width: 24px;
 	height: 24px;
 }
+.clock #clockP {
+	font-family: Orbitron;
+	text-align: center;
+	font-size: 18px;
 
+}
 #search_input {
 	float: right;
 	margin-right: 5px;
@@ -133,6 +149,7 @@ section#main_content {
 
 article time {
 	background: url(../images/calendar.png) left no-repeat;
+	background-size: 16px 16px;
 	color: gray;
 	position: absolute;
 	font-style: italic;
@@ -166,8 +183,16 @@ section#main_content hr {
 	filter: sepia(100%);
 }
 
+.articleContent {
+	font-size: 17px;
+}
+.articleContent strong {
+	color: #91c92b;
+}
+
 small#post_datetime {
 	background: url(../images/calendar.png) left no-repeat;
+	background-size: 16px 16px;
 	position: absolute;
 	color: gray;
 	font-size: 12px;
@@ -181,14 +206,35 @@ small#post_author {
 	font-size: 12px;
 	padding-left: 25px;
 }
-
-.tags span {
-	background-color: #b5e853;
-	color: black;
-	padding: 3px;
+small#post_category {
+	background: url(../images/tags.png) left no-repeat;
+	background-size: 16px 16px;
+	position: absolute;
+	color: gray;
 	font-size: 12px;
+	padding-left: 25px;
+	margin-top: 20px;
+}
+
+.postTags {
+	display: inline-block;
+	margin: 30px 0 10px 0;
+	background: url(../images/tags.png) left no-repeat;
+	background-size: 16px 16px;
+	padding-left: 20px;
+}
+.postTags a {
+	background-color: #97d426;
+	color: black;
+	padding: 5px 6px;
+	font-size: 13px;
 	font-weight: bold;
-	border-radius: 5px;
+	border-radius: 10px;
+	text-decoration: none;
+	margin-left: 10px;
+}
+.postTags a:hover {
+	background-color: #b5e853;
 }
 
 .downloadBtn {
@@ -276,12 +322,12 @@ footer {
 	margin-bottom: 5px;
 }
 .content ol li:before {
-	margin-right: 10px;
+	margin: 0 7px 6px 0;
 	content: counter(item);
 	background: #b5e853;
 	border-radius: 100%;
 	color: rgb(0, 0, 0);
-	width: 1.3em;
+	width: 1.4em;
 	text-align: center;
 	display: inline-block;
 }

@@ -6,7 +6,7 @@ title: Archive
 {% for post in site.posts %}
 	{% if post.tags contains page.tag or post.tag == page.tag %}
 		<article>
-			<h2><a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a></h2>
+			<h2 id="postTitle"><a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a></h2>
 			<time datetime='{{post.date | date: "%B %d. %Y"}}'>{{post.date | date: "%B %d. %Y"}}</time>
 			<div class="post_title_content_space"></div>
 			{% if post.excerpt %}

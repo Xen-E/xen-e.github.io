@@ -24,6 +24,11 @@
         if (searchInput.value != "")
           window.location.href = "/search/?q=" + searchInput.value;
       }
+
+      function gotoTagPage() {
+        var tagsEle = document.getElementById("tags");
+        window.location.href = "/tag/" + tags.value;
+      }
     </script>
 
     {% seo %}
@@ -71,21 +76,44 @@
       <div class="wrapper">
 
         <div class="sidebar">
-          <ol id="links">
-            <li>
-              <img src="/assets/images/github.png" alt="Github Profile">
-              <a href="https://github.com/Xen-E/" target="_blank">Profile</a>
-            </li>
-            <li>
-              <img src="/assets/images/rss.png" alt="Sitemap">
-              <a href="https://xen-e.github.io/sitemap.xml">Sitemap</a>
-            </li>
-            <li>
-              <img src="/assets/images/rss.png" alt="RSS Feed">
-              <a href="https://xen-e.github.io/feed.xml">RSS Feed</a>
-            </li>
-
-          </ol>
+          <div class="categories">
+            <p class="sidebarHeader">Categories</p>
+            <ul>
+              {%- for category in site.categories -%}
+              <li><a href="/category/{{ category[0] }}">{{ category[0] }}</a></li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <div class="tags">
+            <p class="sidebarHeader">Tags</p>
+            <select name="tags" id="tags" onchange="gotoTagPage()">
+              {%- for tag in site.tags -%}
+              <option value="{{ tag[0] }}">{{ tag[0] }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+          <div class="archive">
+            <p class="sidebarHeader">Archive</p>
+            <a href="/year/2022" title="Posts from year 2021">2022</a>
+            <a href="/year/2021" title="Posts from year 2021">2021</a>
+          </div>
+          <div class=".links">
+            <p class="sidebarHeader">Links</p>
+            <ol id="links">
+              <li>
+                <img src="/assets/images/github.png" alt="Github Profile">
+                <a href="https://github.com/Xen-E/" target="_blank">Profile</a>
+              </li>
+              <li>
+                <img src="/assets/images/rss.png" alt="Sitemap">
+                <a href="https://xen-e.github.io/sitemap.xml">Sitemap</a>
+              </li>
+              <li>
+                <img src="/assets/images/rss.png" alt="RSS Feed">
+                <a href="https://xen-e.github.io/feed.xml">RSS Feed</a>
+              </li>
+            </ol>
+          </div>
         </div>
         <section id="main_content">
           <div {% if page.url == "/" or page.url contains "/page" %} class="front_page" {% else %} class="content" {% endif %} >

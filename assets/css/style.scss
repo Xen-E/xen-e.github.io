@@ -47,9 +47,11 @@
 .nav li .active { background-color: #91c92b; }
 
 
-.content h2, h3, h4 {
+.content h2:not(#postTitle), h3, h4 {
 	border-bottom: #578107 dashed 1px;
 }
+
+h2 a { border: none; }
 
 .wrapper {
 	display: flex;
@@ -61,8 +63,31 @@ section#main_content {
 }
 .sidebar {
 	float: left;
-	width: 17%;
+	width: 160px;
+	min-width: 125px;
 	border-right: 1px dashed #b5e853;
+}
+.archive a {
+	font-size: 17px;
+}
+.categories a {
+	font-size: 14px;
+}
+.sidebarHeader {
+	background-color: #91c92b;
+	color: black;
+	padding: 1px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	margin-right: 10px;
+	border-radius: 3px;
+}
+.sidebar select {
+	background-color: #111;
+	color: white;
+	padding: 2px;
+	width: 94%;
 }
 .sidebar ol#links {
 	list-style-type: none;

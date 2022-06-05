@@ -27,7 +27,7 @@
 
       function gotoTagPage() {
         var tagsEle = document.getElementById("tags");
-        window.location.href = "/tag/" + tags.value;
+        window.location.href = "/tag/" + tags.value.toLowerCase();
       }
     </script>
 
@@ -80,7 +80,7 @@
             <p class="sidebarHeader">Categories</p>
             <ul>
               {%- for category in site.categories -%}
-              <li><a href="/category/{{ category[0] }}" title='Show all posts in category "{{ category[0] }}".'>{{ category[0] }}</a></li>
+              <li><a href="/category/{{ category[0] | downcase }}" title='Show all posts in category "{{ category[0] }}".'>{{ category[0] }}</a></li>
               {%- endfor -%}
             </ul>
           </div>

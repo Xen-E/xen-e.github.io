@@ -53,7 +53,7 @@
             </li>
             {% endunless %}
             
-            <li id="github_profile"><a href="https://github.com/Xen-E/" target="_blank">./PROFILE</a></li>
+            
           </ol>
         </div>
 
@@ -68,11 +68,31 @@
     </header>
 
     <div class="container">
-      <section id="main_content">
-        <div {% if page.url == "/" or page.url contains "/page" %} class="front_page" {% else %} class="content" {% endif %} >
-          {{ content }}
-        </div>        
-      </section>
+      <div class="wrapper">
+
+        <div class="sidebar">
+          <ol id="links">
+            <li>
+              <img src="/assets/images/github.png" alt="Github Profile">
+              <a href="https://github.com/Xen-E/" target="_blank">Profile</a>
+            </li>
+            <li>
+              <img src="/assets/images/rss.png" alt="Sitemap">
+              <a href="https://xen-e.github.io/sitemap.xml">Sitemap</a>
+            </li>
+            <li>
+              <img src="/assets/images/rss.png" alt="RSS Feed">
+              <a href="https://xen-e.github.io/feed.xml">RSS Feed</a>
+            </li>
+
+          </ol>
+        </div>
+        <section id="main_content">
+          <div {% if page.url == "/" or page.url contains "/page" %} class="front_page" {% else %} class="content" {% endif %} >
+            {{ content }}
+          </div>        
+        </section>
+      </div>
     </div>
 
     {% if page.url == "/" or page.url contains "/page" %}

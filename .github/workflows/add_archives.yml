@@ -15,8 +15,8 @@ jobs:
       - name: Jekyll Blog Archive
         uses: kannansuresh/jekyll-blog-archive-workflow@v1.0.3
         with:
-          archive_url: "https://xen-e.github.io/archives/archivedata"
-          archive_folder_path: "_archives"
+          archive_url: "https://xen-e.github.io/archives/archivedata.txt"
+          archive_folder_path: "archives"
 
       - name: setup git config
         run: |

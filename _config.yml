@@ -49,6 +49,12 @@ tipue_search:
   exclude:
     files: [search.html, index.html]
     
+# Archives
+collections:
+  archives:
+    output: true
+    permalink: /archives/:path/
+    
 github:
   playlistConverterxx: https://github.com/Xen-E/pcxx
   lolcdb: https://github.com/Xen-E/lolcdb

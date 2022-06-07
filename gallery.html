@@ -1,0 +1,19 @@
+---
+layout: default
+title: Gallery
+description: "Gallery of all posts images."
+permalink: /gallery/
+---
+
+<h2>This's a Gallery of all posts images</h2>
+<div class="gallery">
+{% for image in site.static_files %}
+	{% if image.path contains "/images/" %}
+		{% unless image.path contains "/assets/" or image.path contains "/favicon" %}
+		
+		<a href="{{ image.path }}" title="Click to view" target="_blank"><img src="{{ image.path }}"  alt="image" width="128" height="128"/></a>
+		
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+</div>

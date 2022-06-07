@@ -20,13 +20,46 @@
 }
 
 /* width */
-::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar { width: 13px; }
 /* Track */
 ::-webkit-scrollbar-track { background: #303030; }
 /* Handle */
 ::-webkit-scrollbar-thumb { background: #b5e853; }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover { background: #7fad28; }
+
+
+/* UP/DOWN Buttons */
+::-webkit-scrollbar-button {
+    background-size: 100%;
+	background-color: #b5e853;
+    height: 13px;
+    width: 13px;
+}
+::-webkit-scrollbar-button:hover {
+	background-color: #7fad28;
+}
+/* VERTICAL */
+::-webkit-scrollbar-button:vertical:increment {
+	background-image: url(../images/scroll_down.png);
+}
+::-webkit-scrollbar-button:vertical:decrement {
+	background-image: url(../images/scroll_up.png);
+}
+/* HORIZONTAL */
+::-webkit-scrollbar-button:horizontal:increment {
+	background-image: url(../images/scroll_right.png);
+}
+::-webkit-scrollbar-button:horizontal:decrement {
+	background-image: url(../images/scroll_left.png);
+}
+/* Moves buttons next to each other */
+::-webkit-scrollbar-button:end {
+    display: block;
+}
+::-webkit-scrollbar-button:start {
+    display: none;
+}
 
 .nav ol {
 	list-style-type: none;
@@ -78,10 +111,38 @@ section#main_content {
 	border-right: 1px dashed #b5e853;
 }
 .archive a {
-	font-size: 17px;
+	font-size: 20px;
 }
 .categories a {
-	font-size: 14px;
+	font-size: 13px;
+}
+.latestPost a {
+	font-size: 12px;
+}
+.latestPost p#postDate {
+	background: url(../images/calendar.png) left no-repeat;
+	background-size: 14px 14px;
+	padding-left: 20px;
+	font-size: 10px;
+	color: #868686;
+	margin-bottom: -5px;
+}
+.latestPost p#postCategory {
+	background: url(../images/tags.png) left no-repeat;
+	background-size: 14px 14px;
+	padding-left: 20px;
+	font-size: 10px;
+	color: #868686;
+}
+.youtubers a {
+	background: url(../images/youtube.png) left no-repeat;
+	background-size: 24px 24px;
+	padding-left: 30px;
+	font-size: 12px;
+}
+.youtubers ol {
+	list-style-type: none;
+	padding: 0;
 }
 .sidebarHeader {
 	background-color: #91c92b;
@@ -303,13 +364,30 @@ small#post_category {
 	margin-left: 5px;
 }
 footer {
-	opacity: 0.5;
+	opacity: 0.3;
 	position: relative;
 	top: 100px;
 	padding-bottom: 20px;
 	text-align: center;
 	line-height: 4px;
 	font-size: 11px;
+}
+footer span#left {
+	position: absolute;
+	font-size: 50px;
+	margin: 11px 0 0 -0.8cm;
+	color: #b5e853;
+}
+footer span#left small {
+	position: absolute;
+	font-size: 20px;
+	margin-left: -77px;
+}
+footer span#right {
+	position: absolute;
+	font-size: 50px;
+	margin: -6px 0 0 10px;
+	color: #b5e853;
 }
 
 .content ol {
@@ -330,4 +408,9 @@ footer {
 	width: 1.4em;
 	text-align: center;
 	display: inline-block;
+}
+
+pre.highlight {
+	overflow: auto;
+	max-height: 500px;
 }

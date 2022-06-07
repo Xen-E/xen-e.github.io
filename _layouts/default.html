@@ -37,8 +37,9 @@
 
       function gotoTagPage() {
         var tagsEle = document.getElementById("tags");
-        window.location.href = "/tag/" + tags.value.toLowerCase();
+        window.location.href = "/tag/" + tags.value;
       }
+
     </script>
 
     {% seo %}
@@ -57,6 +58,7 @@
         <div class="nav">
           <ol>
             <li><a href="/" {% if page.url == "/" %} class="active" {% endif %}>Home</a></li>
+            <li><a href="/gallery/" {% if page.url contains "/gallery" %} class="active" {% endif %}>Gallery</a></li>
             <li><a href="/software/pcxx" {% if page.url contains "software/pcxx" %} class="active" {% endif %}>PC++</a></li>
             <li><a href="/software/lolcdb" {% if page.url contains "software/lolcdb" %} class="active" {% endif %}>LoLCDB</a></li>
             <li><a href="/software/fud" {% if page.url contains "software/fud" %} class="active" {% endif %}>FUD</a></li>
@@ -89,25 +91,46 @@
           <div class="categories">
             <p class="sidebarHeader">Categories</p>
             <ul>
-              {%- for category in site.categories -%}
-              <li><a href="/category/{{ category[0] | downcase }}" title='Show all posts in category "{{ category[0] }}".'>{{ category[0] }}</a></li>
-              {%- endfor -%}
+              {% assign categories = site.categories | sort %}
+              {% for category in categories %}
+              <li><a href="/category/{{ category | first | slugify }}/">{{ category[0] }} ({{ category | last | size }})</a></li>
+              {% endfor %}
+
             </ul>
+          </div>
+          <div class="latestPost">
+            <p class="sidebarHeader">Latest Post</p>
+            {% assign post = site.posts.first %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <p id="postDate">{{ post.date | date: "%B %d. %Y" }}</p>
+            <p id="postCategory">{{ post.category }}</p>
           </div>
           <div class="tags">
             <p class="sidebarHeader">Tags</p>
             <select name="tags" id="tags" onchange="gotoTagPage()">
               {%- for tag in site.tags -%}
-              <option value="{{ tag[0] }}">{{ tag[0] }}</option>
+              <option value="{{ tag[0] | slugify }}">{{ tag[0] }}</option>
               {%- endfor -%}
             </select>
           </div>
           <div class="archive">
             <p class="sidebarHeader">Archive</p>
-            <a href="/year/2022" title="Posts from year 2022">2022</a>
-            <a href="/year/2021" title="Posts from year 2021">2021</a>
+            <ul>
+              <li><a href="/year/2022" title="Posts from year 2022">2022</a></li>
+              <li><a href="/year/2021" title="Posts from year 2021">2021</a></li>
+            </ul>
           </div>
-          <div class=".links">
+          <div class="youtubers">
+            <p class="sidebarHeader">Fav Channels</p>
+            <ol>
+              <li><a href="https://www.youtube.com/user/melodysheep" target="_blank">MelodySheep</a></li>
+              <li><a href="https://www.youtube.com/c/ProfessorDaveExplains" target="_blank">Prof. Dave</a></li>
+              <li><a href="https://www.youtube.com/c/Veritasium" target="_blank">Veritasium</a></li>
+              <li><a href="https://www.youtube.com/c/OverSimplified" target="_blank">OverSimplified</a></li>
+              <li><a href="https://www.youtube.com/c/inanutshell" target="_blank">Kurzgesagt</a></li>
+            </ol>
+          </div>
+          <div class="links">
             <p class="sidebarHeader">Links</p>
             <ol id="links">
               <li>
@@ -144,7 +167,9 @@
 
   </body>
   <footer>
-    <p>This website is hosted by GitHub and uses Jekyll.</p>
-    <p>All the content in here is by me, Xen &copy; 2022.</p>
+    
+    <p><span id="left"><small>footer</small> {</span>This website is hosted by GitHub and uses Jekyll.</p>
+    <p>All the content in here is by me, Xen &copy; 2022.<span id="right">}</span></p>
+    
   </footer>
 </html>

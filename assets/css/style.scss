@@ -33,8 +33,8 @@
 ::-webkit-scrollbar-button {
     background-size: 100%;
 	background-color: #b5e853;
-    height: 13px;
-    width: 13px;
+	height: 13px;
+	width: 13px;
 }
 ::-webkit-scrollbar-button:hover {
 	background-color: #7fad28;
@@ -79,6 +79,22 @@
 .nav li a:hover:not(.active) { background-color: #111; }
 .nav li .active { background-color: #91c92b; }
 
+.nav ol ul {
+	z-index: 9999;
+	position: absolute;
+	background-color: rgb(41, 41, 41);
+	border: 1px solid #111;
+	width: 240px;
+	display: none;
+	padding: 0;
+}
+.nav ol ul li { display: block; }
+.nav ol ul li a { 
+	display: block !important;
+	width: 240px;
+	padding: 10px 0;
+}
+.nav #softwareList:hover ul { display: block; }
 
 .content h2:not(#postTitle), h3, h4 {
 	border-bottom: #578107 dashed 1px;

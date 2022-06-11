@@ -58,10 +58,17 @@
         <div class="nav">
           <ol>
             <li><a href="/" {% if page.url == "/" %} class="active" {% endif %}>Home</a></li>
+
+            <li id="softwareList"><a href="#" {% if page.url contains "software/"%} class="active" {% endif %}>Software</a>
+              <ul>
+                <li><a href="/software/pcxx" {% if page.url contains "software/pcxx" %} class="active" {% endif %}>Playlist Converter++</a></li>
+                <li><a href="/software/lolcdb" {% if page.url contains "software/lolcdb" %} class="active" {% endif %}>LoL Champion Database</a></li>
+                <li><a href="/software/fud" {% if page.url contains "software/fud" %} class="active" {% endif %}>File URLs Doctor</a></li>
+              </ul>
+            </li>
+
             <li><a href="/gallery/" {% if page.url contains "/gallery" %} class="active" {% endif %}>Gallery</a></li>
-            <li><a href="/software/pcxx" {% if page.url contains "software/pcxx" %} class="active" {% endif %}>PC++</a></li>
-            <li><a href="/software/lolcdb" {% if page.url contains "software/lolcdb" %} class="active" {% endif %}>LoLCDB</a></li>
-            <li><a href="/software/fud" {% if page.url contains "software/fud" %} class="active" {% endif %}>FUD</a></li>
+            
 
             {% unless page.url contains "/search/" %}
             <li id="search_input">

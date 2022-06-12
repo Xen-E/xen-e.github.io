@@ -8,7 +8,13 @@
 */
 
 @import 'jekyll-theme-hacker';
-	
+
+.container a { text-decoration: none; transition: 0.4s; }
+.container a:hover {
+	color: #74ac0d;
+	text-shadow: 0 0 5px rgba(50, 218, 50, 0.5);
+}
+
 ::-moz-selection {
 	color: black;
 	background: #b5e853;

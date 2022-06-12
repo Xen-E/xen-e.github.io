@@ -15,6 +15,23 @@
 	text-shadow: 0 0 5px rgba(50, 218, 50, 0.5);
 }
 
+table {
+	background-color: #303030;
+	border: 1px dashed #b5e853;
+	border-collapse: collapse;
+}
+table tr {
+	border: 1px dashed #b5e853;
+}
+table th {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+table td {
+	font-size: 15px;
+}
+
 ::-moz-selection {
 	color: black;
 	background: #b5e853;

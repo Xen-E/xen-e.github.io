@@ -2,15 +2,38 @@
 layout: default
 ---
 
+<script>
+  function calcArticle() {
+    const text  = document.getElementById("articleContent").innerText;
+    const wpm   = 238; //Average adult words per minute
+    const words = text.trim().split(/\s+/).length;
+    const time  = Math.ceil(words / wpm);
+    document.getElementById("timeToRead").innerHTML = "~<strong>" +
+                                                      time +
+                                                      "</strong> " +
+                                                      "Minute(s) read. " +
+                                                      "<strong>" +
+                                                      words +
+                                                      "</strong>" +
+                                                      " Words in this Post.";
+  }
+</script>
+
 <h1>{{ page.title }}</h1>
 
-<small id="post_datetime">{{ page.date | date: "%-d %B. %Y" }}</small>
-<small id="post_author">{{ page.author | default: site.author }}</small>
-<small id="post_category">{{ page.category }}</small>
+<div class="postMetadata">
+  <span id="post_datetime">{{ page.date | date: "%-d %B. %Y" }}</span>
+  <span id="post_author">{{ page.author | default: site.author }}</span>
+  <span id="post_category">{{ page.category }}</span>
+</div>
+<div class="postCalculations">
+  <noscript style="color:orange;">Can't calculate article words because <strong>Javascript</strong> is disabled.</noscript>
+  <span id="timeToRead"></span>
+</div>
 
-<br><br>
+<span class="articleContent" id="articleContent">{{content}}</span>
 
-<span class="articleContent">{{content}}</span>
+<script>calcArticle();</script>
 
 {% if page.tags %}
 <small class="postTags">Tags:
@@ -40,7 +63,9 @@ layout: default
       (d.head || d.body).appendChild(s);
       })();
   </script>
-  <noscript>Please enable <strong>JavaScript</strong> to view the comments.</noscript>
+  <noscript style="color:orange; font-size:20px; text-align:center;">
+    Please enable <strong>Javascript</strong> to view the comments.
+  </noscript>
 </p>
 
   <!--p>

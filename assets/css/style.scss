@@ -284,36 +284,44 @@ section#main_content hr {
 }
 
 .articleContent {
+	display: block;
+	margin-top: 60px;
 	font-size: 17px;
 }
 .articleContent strong {
 	color: #91c92b;
 }
 
-small#post_datetime {
+.postMetadata {
+	position: absolute;
+	margin-top: -15px;
+	font-size: 12px;
+	color: gray;
+}
+span#post_datetime {
 	background: url(../images/calendar.png) left no-repeat;
 	background-size: 16px 16px;
-	position: absolute;
-	color: gray;
-	font-size: 12px;
-	margin-top: -20px;
-	padding-left: 25px;
+	padding-left: 22px;
 }
-small#post_author {
+span#post_author {
 	background: url(../images/author.png) left no-repeat;
-	position: absolute;
-	color: gray;
-	font-size: 12px;
-	padding-left: 25px;
+	background-size: 16px 16px;
+	padding-left: 20px;
 }
-small#post_category {
+span#post_category {
 	background: url(../images/tags.png) left no-repeat;
 	background-size: 16px 16px;
+	padding-left: 20px;
+}
+.postCalculations {
 	position: absolute;
-	color: gray;
+	margin-top: 8px;
 	font-size: 12px;
-	padding-left: 25px;
-	margin-top: 20px;
+	font-style: italic;
+	color: gray;
+}
+.postCalculations strong {
+	color: #91c92b;
 }
 
 .postTags {

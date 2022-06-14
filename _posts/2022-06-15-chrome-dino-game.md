@@ -13,7 +13,7 @@ Have you ever had internet issues while using Google Chrome and stumbled upon a 
 
 You don't need to cut off your internet connection to play it, just head over to the error page here: `chrome://network-error/-106` or its own official URL which's here: `chrome://dino`
 
-![Dino Game Disabled]({{site.url}}/images/chrome_no_internet.jpg){:class="image_center"}
+![Google Chrome No Internet Page]({{site.url}}/images/chrome_no_internet.jpg){:class="image_center"}
 
 If you ever get that error page again go ahead and press `Space` or `↑` on *Desktop*, Or by tapping the dinosaur on *Android* or *iOS* mobile devices; During the game, the Lonely T-Rex continuously moves from left to right across a black and white desert landscape, with the player attempting to avoid oncoming obstacles such as cactus plants or the extinct [Pteranodon](https://en.wikipedia.org/wiki/Pteranodon) by jumping or ducking.
 

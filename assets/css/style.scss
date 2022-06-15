@@ -213,6 +213,35 @@ section#main_content {
 	width: 24px;
 	height: 24px;
 }
+
+
+.dsq-widget-list {
+	max-width: 154px;
+	list-style-type: none;
+	padding: 0;
+}
+.dsq-widget-item {
+	list-style-image: none;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed #b5e853;
+}
+.dsq-widget-avatar {
+	border-radius: 100%;
+}
+.dsq-widget-user {
+	padding-left: 5px;
+	font-size: 11px;
+}
+.dsq-widget-comment {
+	font-size: 10px;
+	color: #bdbdbd;
+}
+.dsq-widget-comment a { display: none; }
+.dsq-widget-meta a {
+	font-size: 9px;
+}
+
+
 .clock #clockP {
 	font-family: Orbitron;
 	text-align: center;

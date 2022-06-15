@@ -111,6 +111,16 @@
             <p id="postDate">{{ post.date | date: "%B %d. %Y" }}</p>
             <p id="postCategory">{{ post.category }}</p>
           </div>
+          <div class="recentComments">
+            <p class="sidebarHeader">Recent Comments</p>
+            <script type="text/javascript" src="https://xen-e.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=28&excerpt_length=50"></script>
+            <script>
+              const dsq_widget = document.getElementsByClassName("dsq-widget-list");
+              if (dsq_widget[0].childNodes.length < 5) {
+                document.getElementsByClassName("recentComments")[0].innerHTML = "";
+              }
+            </script>
+          </div>
           <div class="tags">
             <p class="sidebarHeader">Tags</p>
             <select name="tags" id="tags" onchange="gotoTagPage()">

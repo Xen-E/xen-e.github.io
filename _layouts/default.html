@@ -40,12 +40,23 @@
         window.location.href = "/tag/" + tags.value;
       }
 
+      window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height    = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled  = (winScroll / height) * 100;
+        document.getElementById("PB").style.width = scrolled + "%";
+      };
+
     </script>
 
     {% seo %}
   </head>
 
   <body>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="PB"></div>
+    </div>  
 
     <header>
       <div class="container">

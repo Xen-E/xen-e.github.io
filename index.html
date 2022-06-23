@@ -11,7 +11,7 @@ layout: default
 	<time datetime='{{post.date | date: "%B %d. %Y"}}'>{{post.date | date: "%B %d. %Y"}}</time>
 	<div class="post_title_content_space"></div>
 	{% if post.excerpt %}
-    	{{post.excerpt | strip_html }}<a href="{{post.url}}" title="Continue reading...">more</a>
+    	{{post.excerpt | strip_html }}<a href="{{post.url}}" title="Continue reading..." class="more">MORE</a>
 	{% else %}
 		{{post.content}}
 	{% endif %}

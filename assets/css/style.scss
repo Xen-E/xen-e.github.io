@@ -157,6 +157,23 @@ section#main_content {
 	width: 83%;
 	padding-left: 20px;
 }
+
+.sidebarToggleContainer {
+	cursor: pointer;
+	display: block;
+	font-size: 12px;
+	width: 148px;
+	color: black;
+}
+#sidebarToggler {
+	background: url(../images/reading_mode.png) no-repeat left;
+	background-size: 26px 20px;
+	padding: 5px 5px 5px 26px;
+	background-color: #b5e853;
+	border-radius: 5px;
+}
+#sidebarToggler:hover { background-color: #93d11e; }
+
 .sidebar {
 	float: left;
 	width: 160px;

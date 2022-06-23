@@ -47,12 +47,45 @@
         document.getElementById("PB").style.width = scrolled + "%";
       };
 
+      function readingMode(ON) {
+        var sidebar = document.getElementById("sidebar");
+        var readingModeStatus = document.getElementById("readingModeStatus");
+        var mainContent = document.getElementById("main_content");
+
+        if (ON) {
+          sidebar.style.display = "none";
+          mainContent.style.width = "100%";
+          readingModeStatus.innerHTML = "<strong style='color:green;'>ON</strong>";
+        }
+        else {
+          sidebar.style.display = "block";
+          mainContent.style.width = "83%";
+          readingModeStatus.innerHTML = "<strong style='color:red;'>OFF</strong>";
+        }
+      }
+      function toggleSidebar() {
+        if (sidebar.style.display === "none") {
+          readingMode(false)
+          document.cookie = "readingMode=OFF; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        }
+        else {
+          readingMode(true);
+          document.cookie = "readingMode=ON; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        }
+      }
+      function checkReadingMode() {
+        var readingModeON = document.cookie.split(';')
+                            .find(row => row.startsWith("readingMode="))
+                            ?.split('=')[1] == "ON" ? true : false;
+        if (readingModeON) { readingMode(true); }
+      }
+
     </script>
 
     {% seo %}
   </head>
 
-  <body>
+  <body onload="checkReadingMode()">
 
     <div class="progress-container">
       <div class="progress-bar" id="PB"></div>
@@ -103,9 +136,12 @@
     </header>
 
     <div class="container">
+      <div class="sidebarToggleContainer">
+        <p onclick="toggleSidebar()" id="sidebarToggler">READING MODE <span id="readingModeStatus"><strong style="color:red;">OFF</strong></span></p>
+      </div>
       <div class="wrapper">
 
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
           <div class="categories">
             <p class="sidebarHeader">Categories</p>
             <ul>

@@ -80,6 +80,24 @@
         if (readingModeON) { readingMode(true); }
       }
 
+      function displayComments(section) {
+        var disqusEle    = document.getElementById("disqusComments");
+        var disqusTabBtn = document.getElementById("disqusTabBtn");
+        var githubEle    = document.getElementById("githubComments");
+        var githubTabBtn = document.getElementById("githubTabBtn");
+        if (section == "disqus") {
+          disqusEle.style.display = "block";
+          githubEle.style.display = "none";
+          disqusTabBtn.className  = "selected";
+          githubTabBtn.className  = "";
+        }
+        else {
+          disqusEle.style.display = "none";
+          githubEle.style.display = "block";
+          disqusTabBtn.className  = "";
+          githubTabBtn.className  = "selected";
+        }
+      }
     </script>
 
     {% seo %}

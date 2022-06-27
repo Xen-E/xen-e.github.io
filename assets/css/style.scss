@@ -530,3 +530,32 @@ pre.highlight {
 	padding: 4px;
 	border-radius: 5px;
 }
+
+.commentSectionsTabs {
+	background-color: #121111;
+	width: 100%;
+	height: 38px;
+}
+.commentSectionsTabs button {
+	background-color: #000000;
+	color: white;
+	height: 100%;
+	width: 160px;
+	border: none;
+	padding: 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.commentSectionsTabs button:first-of-type { border-right: 1px solid #242424; }
+.commentSectionsTabs button:hover {
+	cursor: pointer;
+	background-color: #b5e853;
+	color: black;
+}
+.commentSectionsTabs button.selected {
+	background-color: #91c72e;
+	color: black;
+}
+.commentSectionsTabs button.selected:hover { background-color: #b5e853; }
+
+.disqusComments { padding-top: 10px; }
